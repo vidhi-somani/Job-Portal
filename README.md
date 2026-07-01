@@ -1,139 +1,262 @@
-# 💼 Job Portal Management System
-### Java Swing Desktop Application
+# Job Portal Management System
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Swing](https://img.shields.io/badge/GUI-Swing-blue)
+![Desktop](https://img.shields.io/badge/Application-Desktop-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+A desktop-based **Job Portal Management System** built using **Java** and **Swing** that simulates the recruitment workflow between **Employers** and **Candidates**.
+
+The application provides dedicated role-based interfaces where employers can create and manage job postings, while candidates can browse available opportunities, submit applications, and track their application status through an intuitive graphical user interface.
+
+This project demonstrates Java programming, Object-Oriented Programming (OOP), GUI development using Swing, and modular software design.
 
 ---
 
-## 📁 Project Structure
+## Features
 
-```
-JobPortal/
+### Employer Module
+
+- Employer Registration & Login
+- Employer Dashboard
+- Post New Job Listings
+- View Job Postings
+- View Applications
+- Update Application Status
+- Delete Job Postings
+
+### Candidate Module
+
+- Candidate Registration & Login
+- Browse Available Jobs
+- Search Job Opportunities
+- View Job Details
+- Apply for Jobs
+- Track Application Status
+
+### User Interface
+
+- Modern Java Swing GUI
+- Separate Dashboards for Employers and Candidates
+- Role-Based Navigation
+- Clean and User-Friendly Interface
+- Modular Project Structure
+
+---
+
+# Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| Java | Core Programming Language |
+| Java Swing | Graphical User Interface |
+| Object-Oriented Programming (OOP) | Application Design |
+| Java Collections Framework | Data Management |
+| Modular Architecture | Code Organization |
+
+---
+
+# Project Structure
+
+```text
+Job-Portal/
+│
+├── bin/
+├── screenshots/
 ├── src/
-│   └── jobportal/
-│       ├── Main.java                    ← Entry Point
-│       ├── model/
-│       │   ├── User.java                ← User entity (Admin/Employer/Candidate)
-│       │   ├── Job.java                 ← Job posting entity
-│       │   └── Application.java         ← Job application entity
-│       ├── dao/
-│       │   └── DataStore.java           ← In-memory data layer (CRUD + Search)
-│       ├── ui/
-│       │   ├── LoginFrame.java          ← Login screen
-│       │   ├── RegisterDialog.java      ← New account registration
-│       │   ├── MainFrame.java           ← Main app window with sidebar
-│       │   ├── AdminDashboardPanel.java ← Admin stats + recent applications
-│       │   ├── EmployerDashboardPanel.java ← Employer stats + job listings
-│       │   ├── BrowseJobsPanel.java     ← Search/filter/apply to jobs
-│       │   ├── PostJobPanel.java        ← Employer: post new job
-│       │   ├── ManageJobsPanel.java     ← Manage/delete/toggle jobs
-│       │   ├── ApplicationsPanel.java   ← Review + update application status
-│       │   ├── MyApplicationsPanel.java ← Candidate: track applications
-│       │   ├── UserManagementPanel.java ← Admin: manage all users
-│       │   └── ProfilePanel.java        ← Candidate profile + resume
-│       └── util/
-│           └── Theme.java               ← Colors, fonts, styling utilities
-├── run.bat    ← Windows build + run script
-├── run.sh     ← Linux/Mac build + run script
-└── README.md
+│   ├── main/
+│   ├── dao/
+│   ├── model/
+│   ├── ui/
+│   └── util/
+│
+├── README.md
+└── run.bat
+```
+
+### Package Description
+
+| Package | Description |
+|----------|-------------|
+| `main` | Application Entry Point |
+| `dao` | Data Access Components |
+| `model` | Domain Models |
+| `ui` | Graphical User Interface |
+| `util` | Helper & Utility Classes |
+
+---
+
+# Application Workflow
+
+## Employer Workflow
+
+```text
+Create Account
+      │
+      ▼
+Login
+      │
+      ▼
+Employer Dashboard
+      │
+      ├────────► Post New Job
+      │
+      ├────────► View Job Postings
+      │
+      └────────► Review Applications
 ```
 
 ---
 
-## 🚀 How to Run
+## Candidate Workflow
 
-### Prerequisites
-- JDK 11 or higher installed
-- Check with: `java -version`
+```text
+Create Account
+      │
+      ▼
+Login
+      │
+      ▼
+Browse Available Jobs
+      │
+      ▼
+Apply for Jobs
+      │
+      ▼
+Track Applications
+```
 
-### Windows
-```bat
+---
+
+# Screenshots
+
+## Login Screen
+
+![Login](screenshots/login.png)
+
+---
+
+## Create Account
+
+![Create Account](screenshots/create-account.png)
+
+---
+
+## Browse Jobs (Candidate)
+
+![Browse Jobs](screenshots/browse-jobs-candidate.png)
+
+---
+
+## Applications (Candidate)
+
+![Applications](screenshots/applications-candidate.png)
+
+---
+
+## Employer Dashboard
+
+![Employer Dashboard](screenshots/employer-dashboard.png)
+
+---
+
+## Post Job (Employer)
+
+![Post Job](screenshots/post-job-employer.png)
+
+---
+
+## Job Postings (Employer)
+
+![Job Postings](screenshots/job-postings-employer.png)
+
+---
+
+## View Applications (Employer)
+
+![Review Applications](screenshots/review-applications-employer.png)
+
+---
+
+# Learning Outcomes
+
+This project helped strengthen my understanding of:
+
+- Object-Oriented Programming (OOP)
+- Java Swing Application Development
+- Event-Driven Programming
+- GUI Design Principles
+- Modular Software Architecture
+- Java Collections Framework
+- Role-Based Application Design
+- Desktop Application Development
+
+---
+
+# Future Improvements
+
+Some planned enhancements include:
+
+- Persistent Database Integration (MySQL / SQLite)
+- Secure Password Encryption
+- Resume Upload Feature
+- Email Notifications
+- Admin Dashboard
+- Advanced Job Search Filters
+- Company Profiles
+- Interview Scheduling
+- Analytics Dashboard
+
+---
+
+# Getting Started
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/vidhi-somani/Job-Portal.git
+```
+
+## Navigate to the Project
+
+```bash
+cd Job-Portal
+```
+## Prerequisites
+
+- Java JDK 17 or later
+- IntelliJ IDEA / Eclipse / VS Code
+
+## Run the Application
+
+1. Clone this repository.
+2. Open the project in your preferred Java IDE.
+3. Navigate to the `src` folder.
+4. Run `Main.java`.
+
+Alternatively, execute:
+
+```bash
 run.bat
 ```
 
-### Linux / macOS
-```bash
-chmod +x run.sh
-./run.sh
-```
+on Windows.
 
-### Manual (any platform)
-```bash
-mkdir out
-find src -name "*.java" | xargs javac -d out
-java -cp out jobportal.Main
-```
+# Contributing
+
+Contributions, suggestions, and feature requests are welcome.
+
+If you'd like to improve this project, feel free to fork the repository and submit a pull request.
 
 ---
 
-## 🔑 Demo Credentials
+# Author
 
-| Role      | Username   | Password   |
-|-----------|------------|------------|
-| Admin     | admin      | admin123   |
-| Employer  | employer1  | emp123     |
-| Employer  | employer2  | emp456     |
-| Candidate | john       | john123    |
-| Candidate | priya      | priya123   |
+**Vidhi Somani**
+
+GitHub: https://github.com/vidhi-somani
 
 ---
 
-## ✨ Features
+## ⭐ Support
 
-### 👤 All Users
-- Secure login / logout
-- New account registration (Candidate or Employer)
-
-### 🛡️ Admin
-- Dashboard with live stats (Users, Jobs, Applications)
-- Manage all users (filter by role, delete)
-- Manage all job postings (toggle active/closed, delete)
-- View and update all applications
-
-### 🏢 Employer
-- Dashboard showing own job stats & applicant count
-- Post new jobs (title, company, location, category, type, salary, description, requirements)
-- Manage own job listings (toggle, delete)
-- Review applications for their jobs
-- Update application status: PENDING → REVIEWED → SHORTLISTED → ACCEPTED / REJECTED
-
-### 👤 Candidate
-- Browse & search jobs (keyword, location, category, job type filters)
-- View detailed job description
-- Apply with a cover letter (one-click)
-- Track own applications with color-coded status
-- Edit profile and add resume/summary
-
----
-
-## 🏗 Architecture
-
-```
-UI Layer (javax.swing)
-     │
-     ▼
-DataStore (Singleton, in-memory ArrayList)
-     │
-     ▼
-Model Classes (User, Job, Application)
-```
-
-- **No database required** — data lives in memory (easily swappable with JDBC/SQLite)
-- **Role-based access** — sidebar menu changes dynamically per role
-- **MVC-inspired** — models, data layer, and UI panels are fully separated
-
----
-
-## 🔧 Extending the Project
-
-| Feature             | Where to add                          |
-|---------------------|---------------------------------------|
-| Database (MySQL)    | Replace `DataStore` with JDBC calls   |
-| File persistence    | Add JSON/CSV save-load in DataStore   |
-| Password hashing    | Use `MessageDigest` in User/DataStore |
-| Email notifications | Add JavaMail in ApplicationsPanel     |
-| Export to PDF/CSV   | Add Apache PDFBox / OpenCSV           |
-
----
-
-## 📦 Requirements
-- Java 11+ (uses `switch` expressions)
-- No external libraries required — pure Java SE + Swing
+If you found this project helpful or interesting, consider giving it a **Star ⭐** on GitHub.
